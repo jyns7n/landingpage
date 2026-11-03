@@ -12,3 +12,10 @@ describe("price formatting", () => {
     expect(formatPriceGrid(12345)).toBe("¥12,345+tax");
   });
 });
+
+import { formatYen } from "@/lib/format";
+describe("formatYen", () => {
+  test("bare yen amount without suffix", () => {
+    expect(formatYen(7800)).toBe("¥7,800");
+  });
+});
