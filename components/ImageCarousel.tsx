@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import { useDragScroll } from "@/hooks/useDragScroll";
 import { imageUrl } from "@/lib/product-utils";
 import type { ProductImage } from "@/lib/types";
 
@@ -15,6 +16,7 @@ interface ImageCarouselProps {
 /** Horizontal scroll-snap carousel: one centered slide with its neighbours peeking in. */
 export function ImageCarousel({ images, label, resetKey }: ImageCarouselProps) {
   const scroller = useRef<HTMLDivElement>(null);
+  useDragScroll(scroller);
 
   useEffect(() => {
     if (scroller.current) scroller.current.scrollLeft = 0;
@@ -27,7 +29,7 @@ export function ImageCarousel({ images, label, resetKey }: ImageCarouselProps) {
       aria-roledescription="carousel"
       aria-label={`${label} images`}
       tabIndex={0}
-      className="flex snap-x snap-mandatory overflow-x-auto px-[calc(50%-126px)] [scrollbar-width:none] lg:px-[calc(50%-210.434px)] [&::-webkit-scrollbar]:hidden"
+      className="flex cursor-grab snap-x snap-mandatory overflow-x-auto px-[calc(50%-126px)] [scrollbar-width:none] lg:px-[calc(50%-210.434px)] [&::-webkit-scrollbar]:hidden"
     >
       {images.map((img, i) => (
         <div

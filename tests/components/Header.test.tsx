@@ -57,3 +57,26 @@ describe("Header", () => {
     expect(header.className).toContain("bg-orange");
   });
 });
+
+describe("Header resize", () => {
+  test("open mobile menu closes and unlocks scroll when the viewport reaches desktop width", async () => {
+    let onChange: ((e: { matches: boolean }) => void) | undefined;
+    Object.defineProperty(window, "matchMedia", {
+      configurable: true,
+      value: () => ({
+        matches: false,
+        addEventListener: (_: string, cb: typeof onChange) => (onChange = cb),
+        removeEventListener: () => {},
+      }),
+    });
+    const user = userEvent.setup();
+    render(<Header />);
+    await user.click(screen.getByRole("button", { name: "Open menu" }));
+    expect(document.body.style.overflow).toBe("hidden");
+    act(() => onChange?.({ matches: true }));
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+    expect(document.body.style.overflow).toBe("");
+    // @ts-expect-error cleanup the stub
+    delete window.matchMedia;
+  });
+});

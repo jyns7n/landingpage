@@ -13,6 +13,14 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
   useBodyScrollLock(true);
 
   useEffect(() => {
+    const mq = window.matchMedia?.("(min-width: 1024px)");
+    if (!mq) return;
+    const onChange = (e: { matches: boolean }) => e.matches && onClose();
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, [onClose]);
+
+  useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);

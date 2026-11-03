@@ -14,7 +14,7 @@ export async function getProducts(): Promise<Product[]> {
   "use cache";
   cacheLife("hours");
 
-  const res = await fetch(PRODUCTS_URL);
+  const res = await fetch(PRODUCTS_URL, { signal: AbortSignal.timeout(10_000) });
   if (!res.ok) throw new ProductsError(`Products API responded ${res.status}`);
   const body = (await res.json()) as ProductsResponse;
   if (!body.success || !Array.isArray(body.data) || body.data.length === 0) {

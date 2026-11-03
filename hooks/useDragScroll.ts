@@ -16,6 +16,7 @@ export function useDragScroll(ref: RefObject<HTMLElement | null>): void {
       moved = false;
       startX = e.clientX;
       startLeft = el.scrollLeft;
+      el.style.scrollSnapType = "none"; // snap would fight scrollLeft writes while dragging
     };
     const onMove = (e: MouseEvent) => {
       if (!dragging) return;
@@ -24,6 +25,7 @@ export function useDragScroll(ref: RefObject<HTMLElement | null>): void {
       el.scrollLeft = startLeft - dx;
     };
     const onUp = () => {
+      if (dragging) el.style.scrollSnapType = "";
       dragging = false;
     };
     // A drag must not count as a click on a "+" button underneath the pointer.

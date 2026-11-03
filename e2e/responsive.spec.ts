@@ -28,6 +28,8 @@ for (const vp of VIEWPORTS) {
         await expect(nav).toBeHidden();
         await expect(burger).toBeVisible();
       }
+      const logoLeft = await page.getByRole("link", { name: "OWNDAYS x MELLER" }).evaluate((el) => el.getBoundingClientRect().left);
+      expect(logoLeft).toBeGreaterThanOrEqual(16);
       const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
       expect(overflow).toBeLessThanOrEqual(0);
     });

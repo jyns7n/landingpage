@@ -19,7 +19,7 @@ function dotStyle(colors: SkuColor[]): { style: CSSProperties; light: boolean } 
   const s = swatchStyle(colors);
   if (s.kind === "solid") return { style: { backgroundColor: s.hex }, light: isLight(s.hex) };
   if (s.kind === "image") {
-    return { style: { backgroundImage: `url(${s.url})`, backgroundSize: "cover" }, light: false };
+    return { style: { backgroundImage: `url(/_next/image?url=${encodeURIComponent(s.url)}&w=96&q=75)`, backgroundSize: "cover" }, light: false };
   }
   return {
     style: { backgroundImage: `linear-gradient(135deg, ${s.hexes[0]} 50%, ${s.hexes[1]} 50%)` },

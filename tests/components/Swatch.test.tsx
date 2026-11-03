@@ -19,9 +19,9 @@ describe("Swatch", () => {
 
   test("pattern image is used when hex_code is null", () => {
     render(<Swatch colors={adisa.skus[1].colors} selected={false} label="Brown Demi" onSelect={() => {}} />);
-    expect(dot("Brown Demi").style.backgroundImage).toContain(
-      "https://storage.owndays.com/storage/colors/",
-    );
+    const bg = decodeURIComponent(dot("Brown Demi").style.backgroundImage);
+    expect(bg).toContain("https://storage.owndays.com/storage/colors/");
+    expect(bg).toContain("/_next/image"); // optimized, not the raw 1.8MB source
   });
 
   test("two-color sku renders a two-tone gradient", () => {

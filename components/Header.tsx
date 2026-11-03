@@ -22,7 +22,7 @@ export function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-40 transition-colors duration-200 ${scrolled ? "bg-orange" : ""}`}
     >
-      <div className="mx-auto flex max-w-[1300px] items-center justify-between px-[16px] py-[23px] lg:px-0 lg:py-[25px]">
+      <div className="mx-auto flex max-w-[1300px] items-center justify-between px-[16px] py-[23px] lg:px-[24px] lg:py-[25px] min-[1440px]:px-0">
         <Logo />
         <nav aria-label="Primary" className="hidden items-center gap-[50px] lg:flex">
           {NAV_ITEMS.map((item, i) => (

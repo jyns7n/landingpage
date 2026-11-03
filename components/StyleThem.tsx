@@ -17,7 +17,7 @@ export function StyleThem({ products }: { products: Product[] }) {
 
   return (
     <section id="style" aria-label="How to style them" className="relative">
-      <div className="relative z-10 mx-auto h-[101px] max-w-[1300px] px-[16px] lg:h-[223px] lg:px-0">
+      <div className="relative z-10 mx-auto h-[101px] max-w-[1300px] px-[16px] lg:h-[223px] lg:px-[24px] min-[1440px]:px-0">
         <SectionTitle as="h2" size="section" lines={["HOW TO", "STYLE THEM"]} />
       </div>
 
