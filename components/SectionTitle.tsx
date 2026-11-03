@@ -22,7 +22,7 @@ export function SectionTitle({ lines, as: Tag = "h2", size = "section", classNam
     >
       {lines.map((line) => (
         <span key={line} data-line aria-hidden="true" className="relative inline-block whitespace-nowrap">
-          <span className="absolute inset-x-0 top-[0.165em] -z-0 h-[0.705em] bg-black" />
+          <span className="absolute inset-x-0 top-1/2 h-[0.705em] -translate-y-1/2 bg-black" />
           <span className="relative">{line}</span>
         </span>
       ))}

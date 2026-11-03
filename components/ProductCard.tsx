@@ -25,7 +25,7 @@ export const ProductCard = memo(function ProductCard({ product, priority = false
   const overflow = product.skus.length - visible.length;
 
   return (
-    <article className="relative h-[383px] w-full border-2 border-black bg-white lg:h-[452px] lg:w-[422px] lg:border-transparent lg:hover:border-black">
+    <article className="@container relative aspect-[422/452] w-full max-w-[560px] border-2 border-black bg-white lg:max-w-none lg:border-transparent lg:hover:border-black">
       <button
         type="button"
         aria-label={`View ${name}`}
@@ -35,14 +35,14 @@ export const ProductCard = memo(function ProductCard({ product, priority = false
 
       <div className="pointer-events-none absolute left-[4.16%] right-[4.42%] top-[14.75px] aspect-[472/359] bg-card-bg">
         {cover && (
-          <div className="absolute left-[6.36%] top-[21.31%] h-[57.38%] w-[87.29%] mix-blend-multiply">
+          <div className="absolute inset-0 mix-blend-multiply">
             <Image
               src={imageUrl(cover.path)}
               alt={`${name} ${colorLabel(sku, "en")}`}
               fill
               priority={priority}
               sizes="(min-width: 1024px) 400px, 80vw"
-              className="object-contain"
+              className="object-cover"
             />
           </div>
         )}
@@ -50,19 +50,19 @@ export const ProductCard = memo(function ProductCard({ product, priority = false
 
       <div className="pointer-events-none absolute inset-x-[4.16%] bottom-[8.37%] top-[73.12%] flex items-center justify-between">
         <div className="text-black">
-          <p className="font-gt text-[44.58px] font-bold leading-[57px] tracking-[1.0543px] lg:text-[52.716px] lg:leading-[67.508px]">
+          <p className="font-gt text-[12.49cqw] font-bold leading-[16cqw] tracking-[0.25cqw]">
             {name}
           </p>
-          <p className="whitespace-nowrap text-[13.53px] leading-[18.555px] tracking-[0.6982px] lg:text-[16px] lg:leading-[21.944px]">
+          <p className="whitespace-nowrap text-[3.79cqw] leading-[5.2cqw] tracking-[0.165cqw]">
             {`${product.product.code} ${sku.code}`}
           </p>
         </div>
 
-        <div className="flex flex-col items-end gap-[12.684px] lg:gap-[15px]">
+        <div className="flex flex-col items-end gap-[3.55cqw]">
           <div
             role="radiogroup"
             aria-label={`${name} colors`}
-            className="pointer-events-auto relative z-10 flex items-center gap-[2.5px] lg:gap-[3px]"
+            className="pointer-events-auto relative z-10 flex items-center gap-[0.71cqw]"
           >
             {visible.map((s) => (
               <Swatch
@@ -73,13 +73,13 @@ export const ProductCard = memo(function ProductCard({ product, priority = false
                 onSelect={() => setSkuId(s.id)}
               />
             ))}
-            {overflow > 0 && <span className="px-1 text-[13px] font-medium">+{overflow}</span>}
+            {overflow > 0 && <span className="px-1 text-[3.1cqw] font-medium">+{overflow}</span>}
           </div>
-          <p className="whitespace-nowrap tracking-[0.8634px]">
-            <span className="font-gt text-[23.467px] font-medium leading-[23px] lg:leading-[27.136px]">
+          <p className="whitespace-nowrap tracking-[0.2cqw]">
+            <span className="font-gt text-[5.56cqw] font-medium leading-[6.43cqw]">
               {formatYen(product.selling_setting.price)}
             </span>
-            <span className="text-[15.815px] font-medium leading-[23px] lg:leading-[27.136px]">+tax</span>
+            <span className="text-[3.75cqw] font-medium leading-[6.43cqw]">+tax</span>
           </p>
         </div>
       </div>

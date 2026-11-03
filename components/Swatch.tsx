@@ -37,12 +37,12 @@ export function Swatch({ colors, selected, label, onSelect }: SwatchProps) {
       aria-checked={selected}
       aria-label={label}
       onClick={onSelect}
-      className={`relative size-[32px] shrink-0 rounded-full border-[1.5px] lg:size-[38px] ${selected ? "border-orange" : "border-transparent"}`}
+      className={`relative size-[9cqw] shrink-0 rounded-full border-[1.5px] ${selected ? "border-orange" : "border-transparent"}`}
     >
       <span
         data-swatch-dot
         style={style}
-        className={`absolute inset-[3.5px] rounded-full lg:inset-[4.5px] ${light ? "shadow-[0_0_0_1px_#999]" : ""}`}
+        className={`absolute inset-[1.1cqw] rounded-full ${light ? "shadow-[0_0_0_1px_#999]" : ""}`}
       />
     </button>
   );

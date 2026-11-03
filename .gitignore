@@ -42,3 +42,5 @@ next-env.d.ts
 
 # sdd workspace
 /.superpowers/
+/test-results/
+/playwright-report/
