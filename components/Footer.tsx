@@ -34,7 +34,7 @@ export function Footer() {
         </nav>
 
         {/* Store panel */}
-        <div className="order-2 flex flex-col items-center gap-[24px] border-b-2 border-orange px-[30px] py-[40px] lg:col-start-2 lg:row-start-1 lg:justify-center lg:gap-[18px] lg:border-b-0 lg:border-l lg:px-0 lg:py-0">
+        <div className="order-2 flex flex-col items-center border-b-2 border-orange px-[30px] py-[40px] lg:col-start-2 lg:row-start-1 lg:justify-center lg:border-b-0 lg:border-l lg:px-0 lg:py-0">
           <div className="flex w-full items-center justify-between lg:w-auto lg:flex-col lg:gap-[18px]">
             <a
               href={STORE_URL}
@@ -55,12 +55,6 @@ export function Footer() {
               <Image src="/brand/external.svg" alt="" width={14} height={14} unoptimized />
             </a>
           </div>
-          <a
-            href="#products"
-            className="flex h-[70px] w-full max-w-[428px] items-center justify-center rounded-full bg-black text-[16px] font-bold tracking-[0.7px] text-white ring-1 ring-orange transition-colors hover:bg-[#535353]"
-          >
-            ALL ITEMS
-          </a>
         </div>
 
         {/* Instagram */}

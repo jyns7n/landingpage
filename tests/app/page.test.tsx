@@ -21,7 +21,7 @@ describe("Home page", () => {
     expect(screen.getAllByRole("button", { name: /^View (ADISA|CHAUEN|KESSIE)$/ }).length).toBeGreaterThanOrEqual(products.length);
     expect(screen.getByRole("heading", { level: 1, name: "PRODUCTS" })).toBeInTheDocument();
     expect(screen.getByRole("heading", { level: 2, name: "HOW TO STYLE THEM" })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "ALL ITEMS" })).toBeInTheDocument();
+    expect(screen.queryByText("ALL ITEMS")).not.toBeInTheDocument();
   });
 
   test("shows an error state with a retry link when the API fails, keeping header and footer", async () => {

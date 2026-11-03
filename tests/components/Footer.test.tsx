@@ -13,9 +13,9 @@ describe("Footer", () => {
     expect(container.querySelector("#stores")).not.toBeNull();
   });
 
-  test("ALL ITEMS leads to the full collection grid", () => {
+  test("has no ALL ITEMS button", () => {
     render(<Footer />);
-    expect(screen.getByRole("link", { name: "ALL ITEMS" })).toHaveAttribute("href", "#products");
+    expect(screen.queryByText("ALL ITEMS")).not.toBeInTheDocument();
   });
 
   test("ONLINE STORE / OWNDAYS.COM open the store in a new tab", () => {

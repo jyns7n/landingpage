@@ -31,7 +31,7 @@ npx playwright test               # e2e: builds, serves on :3100 and checks 390/
 | Modal | Right panel 616px (desktop) / inset full-screen (mobile). Scroll-snap carousel, SKU chips (reset carousel to slide 1), P/No., TYPE, `PRICE ¥7,800 税込`, JP description, **ONLINE STORE** CTA. Enter/leave animation (respects `prefers-reduced-motion`), ESC + backdrop + ✕ close, focus trap, focus returns to the trigger. |
 | ONLINE STORE | `https://www.owndays.com/jp/ja/products/{code}?sku={skuId}`; hover = dark orange; `in_stock === 0` → disabled grey **OUT OF STOCK** and no link. |
 | HOW TO STYLE THEM | Free-scroll horizontal strip (touch/trackpad native, mouse drag-to-scroll), "+" opens the modal for the mapped product. |
-| Footer | Nav anchors (ABOUT/STORES are placeholders), ONLINE STORE / OWNDAYS.COM, ALL ITEMS, legal links. |
+| Footer | Nav anchors (ABOUT/STORES are placeholders), ONLINE STORE / OWNDAYS.COM, legal links. |
 | SEO | Title/description/keywords and OGP image (1200×630) from the Figma "Meta" frame, favicon from Figma. |
 | Errors | If the API fails or returns nothing, the page renders header/hero/footer plus an error state with a retry link. |
 
@@ -53,7 +53,6 @@ Data flow: `app/page.tsx` (server) → `getProducts()` → `ProductGrid` / `Styl
 
 - **Figma wins over the prose spec** where they differ: brand orange is `#ff6723`; the nav is transparent over the hero (solid orange once scrolled, so it stays readable and "sticky"); page background is orange; footer is black.
 - **Style Them → product mapping** is not defined in Figma, so look *N* opens product *(N−1) mod 8*. Edit `lib/style-items.ts` to change it.
-- **ALL ITEMS** (spec §6, "parts" frame) has no slot in the Figma footer; it sits in the footer's right column and scrolls to `#products`.
 - Card code line is always `{code} {skuCode}` (spec), Figma only shows the SKU suffix on the first card.
 - Out-of-stock modals hide the "OWNDAYS online store" subtitle since there is nothing to link to.
 - Product images use `object-cover` in a fixed-aspect box because the API photos carry white margins.
