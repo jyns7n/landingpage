@@ -1,0 +1,681 @@
+const assetPathPrefix = "https://www.figma.com/api/mcp/asset/a316db47-529b-480f-8f09-f99167ea6ae9";
+const imgCollabLogo = `${assetPathPrefix}/a8498.svg`;
+const imgEllipse1572 = `${assetPathPrefix}/ffb03.png`;
+const imgColor1StateSelected = `${assetPathPrefix}/1ac6d.svg`;
+const imgImage = `${assetPathPrefix}/cb0cb.png`;
+const imgSwatches = `${assetPathPrefix}/a7032.svg`;
+const imgSwatches1 = `${assetPathPrefix}/83fc3.svg`;
+const imgSwatches2 = `${assetPathPrefix}/7617f.svg`;
+const imgRectangle13222 = `${assetPathPrefix}/56306.png`;
+const imgRectangle13223 = `${assetPathPrefix}/17dfa.png`;
+const imgImage1 = `${assetPathPrefix}/bcb0c.png`;
+const imgImage2 = `${assetPathPrefix}/b4cf3.png`;
+const imgImage3 = `${assetPathPrefix}/87076.png`;
+const imgImage4 = `${assetPathPrefix}/b4b0c.png`;
+const imgImage5 = `${assetPathPrefix}/ea5e8.png`;
+const imgImage6 = `${assetPathPrefix}/c97fe.png`;
+const imgImage7 = `${assetPathPrefix}/093d7.png`;
+const imgRectangle13217 = `${assetPathPrefix}/b4979.png`;
+const imgRectangle13219 = `${assetPathPrefix}/6d921.png`;
+const imgRectangle13220 = `${assetPathPrefix}/0729f.png`;
+const imgRectangle13218 = `${assetPathPrefix}/9afcb.png`;
+const imgRectangle13221 = `${assetPathPrefix}/69bea.png`;
+const imgRectangle13224 = `${assetPathPrefix}/2e89f.png`;
+const imgRectangle13225 = `${assetPathPrefix}/d4723.png`;
+const imgRectangle13226 = `${assetPathPrefix}/84f1d.png`;
+const imgRectangle13227 = `${assetPathPrefix}/9a97c.png`;
+const imgRectangle13228 = `${assetPathPrefix}/bf749.png`;
+const imgVector284 = `${assetPathPrefix}/893e7.svg`;
+const imgVector283 = `${assetPathPrefix}/2ddc1.svg`;
+const imgContents = `${assetPathPrefix}/d45fd.svg`;
+const imgCart1 = `${assetPathPrefix}/423d3.svg`;
+const imgInstagram = `${assetPathPrefix}/afed7.svg`;
+const imgVector282 = `${assetPathPrefix}/fdea2.svg`;
+const imgVector287 = `${assetPathPrefix}/9783d.svg`;
+const imgSwatches3 = `${assetPathPrefix}/7180c.svg`;
+const imgSwatches4 = `${assetPathPrefix}/2f648.svg`;
+const imgSwatches5 = `${assetPathPrefix}/4fee4.svg`;
+const imgSwatches6 = `${assetPathPrefix}/58675.svg`;
+const imgSwatches7 = `${assetPathPrefix}/8fdb1.svg`;
+const imgSwatches8 = `${assetPathPrefix}/37ba3.svg`;
+const imgIcBaselinePlus = `${assetPathPrefix}/b33fd.svg`;
+
+function Frame1321316256({ className }: { className?: string }) {
+  return (
+    <div className={className || "content-stretch flex flex-col items-start overflow-clip py-[25px] relative w-[1300px]"} data-node-id="5271:889">
+      <div className="content-stretch flex items-center justify-between relative shrink-0 w-full" data-node-id="5271:890">
+        <div className="h-[52px] relative shrink-0 w-[351px]" data-node-id="5271:891" data-name="Collab-Logo">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCollabLogo} />
+        </div>
+        <div className="content-stretch flex gap-[50px] h-[36.171px] items-center relative shrink-0 w-[304.694px]" data-node-id="5271:907" data-name="Navigation">
+          <div className="h-[20px] relative shrink-0 w-[54px]" data-node-id="5271:908" data-name="Button">
+            <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+              <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Favorit:Medium'] leading-[20.095px] left-[25.99px] not-italic text-[15.071px] text-center text-white top-[0.5px] tracking-[0.7033px] uppercase whitespace-nowrap" data-node-id="5271:909">
+                ABOUT
+              </p>
+            </div>
+          </div>
+          <div className="h-[20px] relative shrink-0 w-[87px]" data-node-id="5271:910" data-name="Button">
+            <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+              <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Favorit:Bold'] leading-[20.095px] left-[43px] not-italic text-[15.071px] text-center text-white top-[0.5px] tracking-[0.7033px] uppercase whitespace-nowrap" data-node-id="5271:911">
+                Products
+              </p>
+            </div>
+          </div>
+          <div className="h-[20px] relative shrink-0 w-[63px]" data-node-id="5271:912" data-name="Button">
+            <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+              <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Favorit:Bold'] leading-[20.095px] left-[31px] not-italic text-[15.071px] text-center text-white top-[0.5px] tracking-[0.7033px] uppercase whitespace-nowrap" data-node-id="5271:913">
+                Stores
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+type SwatchesProps = {
+  className?: string;
+  color?: "1" | "12";
+  state?: "Selected" | "Un-select";
+};
+
+function Swatches({ className, color = "1", state = "Selected" }: SwatchesProps) {
+  const is12AndUnSelect = color === "12" && state === "Un-select";
+  return (
+    <div className={className || `relative size-[38px] ${is12AndUnSelect ? "drop-shadow-[0px_0px_0px_#999] overflow-clip rounded-[160px]" : ""}`} id={is12AndUnSelect ? "node-419_2537" : "node-419_2421"}>
+      <div className={`absolute ${is12AndUnSelect ? "left-[5px] size-[28px] top-[5px]" : "inset-[-2.63%]"}`} id={is12AndUnSelect ? "node-419_2538" : undefined}>
+        <img alt="" className={`block max-w-none size-full ${is12AndUnSelect ? "absolute inset-0" : ""}`} height={is12AndUnSelect ? "28" : undefined} src={is12AndUnSelect ? imgEllipse1572 : imgColor1StateSelected} width={is12AndUnSelect ? "28" : undefined} />
+      </div>
+    </div>
+  );
+}
+
+function Group1171277379({ className }: { className?: string }) {
+  return (
+    <div className={className || "h-[452px] relative w-[422px]"} data-node-id="5271:2431">
+      <div className="absolute bg-white border-2 border-black border-solid inset-0" data-node-id="5271:2432" />
+      <div className="absolute content-stretch flex inset-[73.12%_4.39%_8.37%_4.16%] items-center justify-between" data-node-id="5271:2433">
+        <div className="[word-break:break-word] grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] not-italic place-items-start relative shrink-0 text-black" data-node-id="5271:2434">
+          <p className="col-1 font-['GT_America_Trial:Cm_Bl'] leading-[67.508px] ml-0 mt-0 relative row-1 text-[52.716px] tracking-[1.0543px] w-[124.411px]" data-node-id="5271:2435">
+            ADISA
+          </p>
+          <p className="col-1 font-['Favorit:Regular'] leading-[21.944px] ml-0 mt-[68.53px] relative row-1 text-[16px] tracking-[0.6982px] whitespace-nowrap" data-node-id="5271:2436">
+            ML2001D-6S C1
+          </p>
+        </div>
+        <div className="content-stretch flex flex-col gap-[15px] items-end relative shrink-0" data-node-id="5271:2437">
+          <div className="content-stretch flex gap-[3px] items-center relative shrink-0" data-node-id="5271:2438">
+            <div className="relative shrink-0 size-[38px]" data-node-id="5271:2439" data-name="Swatches">
+              <div className="absolute inset-[-2.63%]">
+                <img alt="" className="block max-w-none size-full" src={imgSwatches} />
+              </div>
+            </div>
+            <Swatches className="drop-shadow-[0px_0px_0px_#999] overflow-clip relative rounded-[160px] shrink-0 size-[38px]" color="12" state="Un-select" />
+            <div className="relative shrink-0 size-[38px]" data-node-id="5271:2441" data-name="Swatches">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSwatches1} />
+            </div>
+            <div className="relative shrink-0 size-[38px]" data-node-id="5271:2442" data-name="Swatches">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSwatches2} />
+            </div>
+          </div>
+          <p className="[word-break:break-word] font-['Favorit:Medium'] leading-[0] not-italic relative shrink-0 text-[0px] text-black tracking-[0.8634px] whitespace-nowrap" data-node-id="5271:2444">
+            <span className="font-['GT_America_Trial:Md'] leading-[27.136px] text-[23.467px]">¥7,800</span>
+            <span className="leading-[27.136px] text-[15.815px]">+tax</span>
+          </p>
+        </div>
+      </div>
+      <div className="absolute aspect-[472/359] left-[4.16%] right-[4.42%] top-[14.75px]" data-node-id="5271:2445" data-name="image">
+        <div aria-hidden className="absolute inset-0 pointer-events-none">
+          <div className="absolute bg-[#f7f7f7] inset-0" />
+          <div className="absolute inset-0 mix-blend-multiply overflow-hidden">
+            <img alt="" className="absolute h-[57.38%] left-[6.36%] max-w-none top-[21.31%] w-[87.29%]" src={imgImage} />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function Products() {
+  return (
+    <div className="bg-[var(--orange,#ff6723)] relative size-full" data-node-id="5271:2426" data-name="PRODUCTS">
+      <div className="absolute bottom-px h-[400px] left-0 w-[1440px]" data-node-id="5271:2427">
+        <div className="absolute bg-black inset-0" data-node-id="I5271:2427;307:1075" />
+        <div className="[word-break:break-word] absolute contents inset-[87.5%_4.44%_7.5%_4.83%] leading-[20px] not-italic text-[color:var(--orange,#ff6723)] tracking-[0.7px] uppercase whitespace-nowrap" data-node-id="I5271:2427;325:1739">
+          <div className="absolute content-stretch flex gap-[40px] inset-[87.5%_57.97%_7.5%_4.83%] items-center text-[13px]" data-node-id="I5271:2427;307:1612" data-name="Navigation">
+            <p className="font-['Favorit:Medium'] relative shrink-0" data-node-id="I5271:2427;307:1681">
+              Contact Us
+            </p>
+            <p className="font-['Favorit:Bold'] relative shrink-0" data-node-id="I5271:2427;307:1614">
+              Privacy Policy
+            </p>
+            <p className="font-['Favorit:Bold'] relative shrink-0" data-node-id="I5271:2427;307:1616">
+              Terms of Use
+            </p>
+            <p className="font-['Favorit:Bold'] relative shrink-0 text-center" data-node-id="I5271:2427;307:1618">
+              特定商取引法表示
+            </p>
+          </div>
+          <p className="absolute font-['Favorit:Regular'] inset-[87.5%_4.44%_7.5%_68.96%] text-[12px] text-right" data-node-id="I5271:2427;307:1637">
+            COPYRIGHT (C) OWNDAYS co., ltd. ALL RIGHTS RESERVED.
+          </p>
+        </div>
+        <div className="absolute inset-[80%_0.21%_20%_0]" data-node-id="I5271:2427;325:1699">
+          <div className="absolute inset-[-1px_0]">
+            <img alt="" className="block max-w-none size-full" src={imgVector284} />
+          </div>
+        </div>
+        <div className="absolute flex inset-[0_35.33%_20%_64.67%] items-center justify-center" data-node-id="I5271:2427;307:1679" style={{ containerType: "size" }}>
+          <div className="flex-none h-[0px] rotate-90 w-[100cqh]">
+            <div className="relative size-full">
+              <div className="absolute inset-[-1px_0]">
+                <img alt="" className="block max-w-none size-full" src={imgVector283} />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="absolute contents inset-[30.5%_10.37%_50.25%_75.07%]" data-node-id="I5271:2427;325:1728">
+          <div className="absolute contents inset-[44.75%_12.77%_50.25%_77.57%]" data-node-id="I5271:2427;325:1727">
+            <div className="absolute inset-[45.25%_12.77%_51%_86.06%]" data-node-id="I5271:2427;325:1722" data-name="contents">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgContents} />
+            </div>
+            <p className="[word-break:break-word] absolute font-['Favorit:Medium'] inset-[44.75%_14.49%_50.25%_77.57%] leading-[20px] not-italic text-[14px] text-[color:var(--orange,#ff6723)] text-center tracking-[0.7px] uppercase" data-node-id="I5271:2427;325:1720">
+              OWNDAYS.COM
+            </p>
+          </div>
+          <div className="absolute contents inset-[30.5%_10.37%_60.25%_75.07%]" data-node-id="I5271:2427;325:1698">
+            <p className="[word-break:break-word] absolute font-['Favorit:Medium'] inset-[33%_10.37%_62%_78.24%] leading-[20px] not-italic text-[21px] text-[color:var(--orange,#ff6723)] tracking-[0.7px] uppercase whitespace-nowrap" data-node-id="I5271:2427;307:1663">
+              ONLINE STORE
+            </p>
+            <div className="absolute inset-[30.5%_22.38%_60.25%_75.07%]" data-node-id="I5271:2427;325:1693" data-name="cart 1">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCart1} />
+            </div>
+          </div>
+        </div>
+        <div className="-translate-x-1/2 absolute bottom-[27.5%] left-[calc(50%-603.2px)] top-[66.5%] w-[24px]" data-node-id="I5271:2427;325:1885" />
+        <div className="absolute left-[70px] rounded-[1px] size-[24px] top-[227px]" data-node-id="I5271:2427;341:3084" data-name="Icons">
+          <div className="absolute inset-[16.67%]" data-node-id="I5271:2427;341:3084;518:26932" data-name="Instagram">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgInstagram} />
+          </div>
+        </div>
+        <div className="absolute contents inset-[17.25%_87.96%_57%_4.86%]" data-node-id="I5271:2427;337:2285">
+          <div className="absolute contents inset-[17.25%_87.96%_57%_4.86%]" data-node-id="I5271:2427;325:1719">
+            <div className="[word-break:break-word] absolute content-stretch flex flex-col font-['Favorit:Bold'] gap-[20px] inset-[17.25%_87.96%_57%_4.86%] items-start justify-center leading-[20.095px] not-italic text-[18px] text-[color:var(--orange,#ff6723)] tracking-[0.7033px] uppercase whitespace-nowrap" data-node-id="I5271:2427;307:1671" data-name="Navigation">
+              <p className="relative shrink-0" data-node-id="I5271:2427;307:1673">
+                ABOUT
+              </p>
+              <p className="relative shrink-0" data-node-id="I5271:2427;307:1675">
+                Products
+              </p>
+              <p className="relative shrink-0" data-node-id="I5271:2427;307:1677">
+                Stores
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="-translate-x-1/2 absolute h-0 left-1/2 top-0 w-[1446px]" data-node-id="I5271:2427;341:2581">
+          <div className="absolute inset-[-1px_0]">
+            <img alt="" className="block max-w-none size-full" src={imgVector282} />
+          </div>
+        </div>
+      </div>
+      <div className="absolute h-[633px] left-0 top-0 w-[1440px]" data-node-id="5271:2428">
+        <div aria-hidden className="absolute inset-0 pointer-events-none">
+          <div className="absolute inset-0 overflow-hidden">
+            <img alt="" className="absolute h-[341.19%] left-0 max-w-none top-[-115.62%] w-full" src={imgRectangle13222} />
+          </div>
+          <div className="absolute bg-size-[1335.423919081688px_868.9739021062851px] bg-top-left inset-0 opacity-30" style={{ backgroundImage: `url("${imgRectangle13223}")` }} />
+        </div>
+      </div>
+      <div className="-translate-x-1/2 absolute h-0 left-1/2 top-[633px] w-[1440px]" data-node-id="5271:2429">
+        <div className="absolute inset-[-1px_0]">
+          <img alt="" className="block max-w-none size-full" src={imgVector287} />
+        </div>
+      </div>
+      <div className="-translate-x-1/2 absolute content-center flex flex-wrap gap-[17px] items-center left-1/2 top-[763px] w-[1300px]" data-node-id="5271:2430">
+        <Group1171277379 className="h-[452px] relative shrink-0 w-[422px]" />
+        <div className="h-[452px] relative shrink-0 w-[422px]" data-node-id="5271:2447">
+          <div className="absolute bg-white inset-0" data-node-id="I5271:2447;5271:2432" />
+          <div className="absolute content-stretch flex inset-[73.12%_4.39%_8.37%_4.16%] items-center justify-between" data-node-id="I5271:2447;5271:2433">
+            <div className="[word-break:break-word] grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] not-italic place-items-start relative shrink-0 text-black whitespace-nowrap" data-node-id="I5271:2447;5271:2434">
+              <p className="col-1 font-['GT_America_Trial:Cm_Bl'] leading-[67.508px] ml-0 mt-0 relative row-1 text-[52.716px] tracking-[1.0543px]" data-node-id="I5271:2447;5271:2435">
+                CHAUEN
+              </p>
+              <p className="col-1 font-['Favorit:Regular'] leading-[21.944px] ml-0 mt-[68.53px] relative row-1 text-[16px] tracking-[0.6982px]" data-node-id="I5271:2447;5271:2436">
+                ML2002D-6S
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col gap-[15px] items-end relative shrink-0" data-node-id="I5271:2447;5271:2437">
+              <div className="content-stretch flex gap-[3px] items-center relative shrink-0" data-node-id="I5271:2447;5271:2438">
+                <div className="relative shrink-0 size-[38px]" data-node-id="I5271:2447;5271:2439" data-name="Swatches">
+                  <div className="absolute inset-[-2.63%]">
+                    <img alt="" className="block max-w-none size-full" src={imgSwatches} />
+                  </div>
+                </div>
+                <Swatches className="drop-shadow-[0px_0px_0px_#999] overflow-clip relative rounded-[160px] shrink-0 size-[38px]" color="12" state="Un-select" />
+                <div className="relative shrink-0 size-[38px]" data-node-id="I5271:2447;5271:2441" data-name="Swatches">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSwatches1} />
+                </div>
+                <div className="relative shrink-0 size-[38px]" data-node-id="I5271:2447;5271:2442" data-name="Swatches">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSwatches3} />
+                </div>
+              </div>
+              <p className="[word-break:break-word] font-['Favorit:Medium'] leading-[0] not-italic relative shrink-0 text-[0px] text-black tracking-[0.8634px] whitespace-nowrap" data-node-id="I5271:2447;5271:2444">
+                <span className="font-['GT_America_Trial:Md'] leading-[27.136px] text-[23.467px]">¥7,800</span>
+                <span className="leading-[27.136px] text-[15.815px]">+tax</span>
+              </p>
+            </div>
+          </div>
+          <div className="absolute aspect-[472/359] left-[4.16%] right-[4.42%] top-[14.75px]" data-node-id="I5271:2447;5271:2445" data-name="image">
+            <div aria-hidden className="absolute inset-0 pointer-events-none">
+              <div className="absolute bg-[#f7f7f7] inset-0" />
+              <div className="absolute inset-0 mix-blend-multiply overflow-hidden">
+                <img alt="" className="absolute h-[57.38%] left-[6.36%] max-w-none top-[21.31%] w-[87.29%]" src={imgImage1} />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="h-[452px] relative shrink-0 w-[422px]" data-node-id="5271:2448">
+          <div className="absolute bg-white inset-0" data-node-id="I5271:2448;5271:2432" />
+          <div className="absolute content-stretch flex inset-[73.12%_4.39%_8.37%_4.16%] items-center justify-between" data-node-id="I5271:2448;5271:2433">
+            <div className="[word-break:break-word] grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] not-italic place-items-start relative shrink-0 text-black whitespace-nowrap" data-node-id="I5271:2448;5271:2434">
+              <p className="col-1 font-['GT_America_Trial:Cm_Bl'] leading-[67.508px] ml-0 mt-0 relative row-1 text-[52.716px] tracking-[1.0543px]" data-node-id="I5271:2448;5271:2435">
+                CUMBI
+              </p>
+              <p className="col-1 font-['Favorit:Regular'] leading-[21.944px] ml-0 mt-[68.53px] relative row-1 text-[16px] tracking-[0.6982px]" data-node-id="I5271:2448;5271:2436">
+                ML2003D-6S
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col gap-[15px] items-end relative shrink-0" data-node-id="I5271:2448;5271:2437">
+              <div className="content-stretch flex gap-[3px] items-center relative shrink-0" data-node-id="I5271:2448;5271:2438">
+                <div className="relative shrink-0 size-[38px]" data-node-id="I5271:2448;5271:2439" data-name="Swatches">
+                  <div className="absolute inset-[-2.63%]">
+                    <img alt="" className="block max-w-none size-full" src={imgSwatches} />
+                  </div>
+                </div>
+                <Swatches className="drop-shadow-[0px_0px_0px_#999] overflow-clip relative rounded-[160px] shrink-0 size-[38px]" color="12" state="Un-select" />
+                <div className="relative shrink-0 size-[38px]" data-node-id="I5271:2448;5271:2441" data-name="Swatches">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSwatches1} />
+                </div>
+                <div className="relative shrink-0 size-[38px]" data-node-id="I5271:2448;5271:2442" data-name="Swatches">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSwatches4} />
+                </div>
+              </div>
+              <p className="[word-break:break-word] font-['Favorit:Medium'] leading-[0] not-italic relative shrink-0 text-[0px] text-black tracking-[0.8634px] whitespace-nowrap" data-node-id="I5271:2448;5271:2444">
+                <span className="font-['GT_America_Trial:Md'] leading-[27.136px] text-[23.467px]">¥7,800</span>
+                <span className="leading-[27.136px] text-[15.815px]">+tax</span>
+              </p>
+            </div>
+          </div>
+          <div className="absolute aspect-[472/359] left-[4.16%] right-[4.42%] top-[14.75px]" data-node-id="I5271:2448;5271:2445" data-name="image">
+            <div aria-hidden className="absolute inset-0 pointer-events-none">
+              <div className="absolute bg-[#f7f7f7] inset-0" />
+              <div className="absolute inset-0 mix-blend-multiply overflow-hidden">
+                <img alt="" className="absolute h-[57.38%] left-[6.36%] max-w-none top-[21.31%] w-[87.29%]" src={imgImage2} />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="h-[452px] relative shrink-0 w-[422px]" data-node-id="5271:2449">
+          <div className="absolute bg-white inset-0" data-node-id="5271:2450" />
+          <div className="absolute content-stretch flex inset-[73.12%_4.39%_8.37%_4.16%] items-center justify-between" data-node-id="5271:2451">
+            <div className="[word-break:break-word] grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] not-italic place-items-start relative shrink-0 text-black whitespace-nowrap" data-node-id="5271:2452">
+              <p className="col-1 font-['GT_America_Trial:Cm_Bl'] leading-[67.508px] ml-0 mt-0 relative row-1 text-[52.716px] tracking-[1.0543px]" data-node-id="5271:2453">
+                KESSIE
+              </p>
+              <p className="col-1 font-['Favorit:Regular'] leading-[21.944px] ml-0 mt-[68.53px] relative row-1 text-[16px] tracking-[0.6982px]" data-node-id="5271:2454">
+                ML2004D-6S
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col gap-[15px] items-end relative shrink-0" data-node-id="5271:2455">
+              <div className="content-stretch flex gap-[3px] items-center relative shrink-0" data-node-id="5271:2456">
+                <div className="relative shrink-0 size-[38px]" data-node-id="5271:2457" data-name="Swatches">
+                  <div className="absolute inset-[-2.63%]">
+                    <img alt="" className="block max-w-none size-full" src={imgSwatches} />
+                  </div>
+                </div>
+                <Swatches className="drop-shadow-[0px_0px_0px_#999] overflow-clip relative rounded-[160px] shrink-0 size-[38px]" color="12" state="Un-select" />
+                <div className="relative shrink-0 size-[38px]" data-node-id="5271:2459" data-name="Swatches">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSwatches5} />
+                </div>
+                <div className="relative shrink-0 size-[38px]" data-node-id="5271:2460" data-name="Swatches">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSwatches6} />
+                </div>
+              </div>
+              <p className="[word-break:break-word] font-['Favorit:Medium'] leading-[0] not-italic relative shrink-0 text-[0px] text-black tracking-[0.8634px] whitespace-nowrap" data-node-id="5271:2464">
+                <span className="font-['GT_America_Trial:Md'] leading-[27.136px] text-[23.467px]">¥7,800</span>
+                <span className="leading-[27.136px] text-[15.815px]">+tax</span>
+              </p>
+            </div>
+          </div>
+          <div className="absolute aspect-[472/359] left-[4.16%] right-[4.42%] top-[14.75px]" data-node-id="5271:2465" data-name="image">
+            <div aria-hidden className="absolute inset-0 pointer-events-none">
+              <div className="absolute bg-[#f7f7f7] inset-0" />
+              <div className="absolute inset-0 mix-blend-multiply overflow-hidden">
+                <img alt="" className="absolute h-[57.38%] left-[6.36%] max-w-none top-[21.31%] w-[87.29%]" src={imgImage3} />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="h-[452px] relative shrink-0 w-[422px]" data-node-id="5271:2467">
+          <div className="absolute bg-white inset-0" data-node-id="5271:2468" />
+          <div className="absolute content-stretch flex inset-[73.12%_4.39%_8.37%_4.16%] items-center justify-between" data-node-id="5271:2469">
+            <div className="[word-break:break-word] grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] not-italic place-items-start relative shrink-0 text-black whitespace-nowrap" data-node-id="5271:2470">
+              <p className="col-1 font-['GT_America_Trial:Cm_Bl'] leading-[67.508px] ml-0 mt-0 relative row-1 text-[52.716px] tracking-[1.0543px]" data-node-id="5271:2471">
+                NAYAH
+              </p>
+              <p className="col-1 font-['Favorit:Regular'] leading-[21.944px] ml-0 mt-[68.53px] relative row-1 text-[16px] tracking-[0.6982px]" data-node-id="5271:2472">
+                ML2005D-6S
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col gap-[15px] items-end relative shrink-0" data-node-id="5271:2473">
+              <div className="content-stretch flex gap-[3px] items-center relative shrink-0" data-node-id="5271:2474">
+                <div className="relative shrink-0 size-[38px]" data-node-id="5271:2475" data-name="Swatches">
+                  <div className="absolute inset-[-2.63%]">
+                    <img alt="" className="block max-w-none size-full" src={imgSwatches} />
+                  </div>
+                </div>
+                <Swatches className="drop-shadow-[0px_0px_0px_#999] overflow-clip relative rounded-[160px] shrink-0 size-[38px]" color="12" state="Un-select" />
+                <div className="relative shrink-0 size-[38px]" data-node-id="5271:2478" data-name="Swatches">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSwatches7} />
+                </div>
+                <div className="relative shrink-0 size-[38px]" data-node-id="5271:2481" data-name="Swatches">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSwatches6} />
+                </div>
+              </div>
+              <p className="[word-break:break-word] font-['Favorit:Medium'] leading-[0] not-italic relative shrink-0 text-[0px] text-black tracking-[0.8634px] whitespace-nowrap" data-node-id="5271:2484">
+                <span className="font-['GT_America_Trial:Md'] leading-[27.136px] text-[23.467px]">¥7,800</span>
+                <span className="leading-[27.136px] text-[15.815px]">+tax</span>
+              </p>
+            </div>
+          </div>
+          <div className="absolute aspect-[472/359] left-[4.16%] right-[4.42%] top-[14.75px]" data-node-id="5271:2485" data-name="image">
+            <div aria-hidden className="absolute inset-0 pointer-events-none">
+              <div className="absolute bg-[#f7f7f7] inset-0" />
+              <div className="absolute inset-0 mix-blend-multiply overflow-hidden">
+                <img alt="" className="absolute h-[57.38%] left-[6.36%] max-w-none top-[21.31%] w-[87.29%]" src={imgImage4} />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="h-[452px] relative shrink-0 w-[422px]" data-node-id="5271:2487">
+          <div className="absolute bg-white inset-0" data-node-id="I5271:2487;5271:2432" />
+          <div className="absolute content-stretch flex inset-[73.12%_4.39%_8.37%_4.16%] items-center justify-between" data-node-id="I5271:2487;5271:2433">
+            <div className="[word-break:break-word] grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] not-italic place-items-start relative shrink-0 text-black" data-node-id="I5271:2487;5271:2434">
+              <p className="col-1 font-['GT_America_Trial:Cm_Bl'] leading-[67.508px] ml-0 mt-0 relative row-1 text-[52.716px] tracking-[1.0543px] w-[124.411px]" data-node-id="I5271:2487;5271:2435">
+                JAMIL
+              </p>
+              <p className="col-1 font-['Favorit:Regular'] leading-[21.944px] ml-0 mt-[68.53px] relative row-1 text-[16px] tracking-[0.6982px] whitespace-nowrap" data-node-id="I5271:2487;5271:2436">
+                ML2006D-6S
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col gap-[15px] items-end relative shrink-0" data-node-id="I5271:2487;5271:2437">
+              <div className="content-stretch flex gap-[3px] items-center relative shrink-0" data-node-id="I5271:2487;5271:2438">
+                <div className="relative shrink-0 size-[38px]" data-node-id="I5271:2487;5271:2439" data-name="Swatches">
+                  <div className="absolute inset-[-2.63%]">
+                    <img alt="" className="block max-w-none size-full" src={imgSwatches8} />
+                  </div>
+                </div>
+                <div className="relative shrink-0 size-[38px]" data-node-id="I5271:2487;5271:2441" data-name="Swatches">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSwatches3} />
+                </div>
+              </div>
+              <p className="[word-break:break-word] font-['Favorit:Medium'] leading-[0] not-italic relative shrink-0 text-[0px] text-black tracking-[0.8634px] whitespace-nowrap" data-node-id="I5271:2487;5271:2444">
+                <span className="font-['GT_America_Trial:Md'] leading-[27.136px] text-[23.467px]">¥7,800</span>
+                <span className="leading-[27.136px] text-[15.815px]">+tax</span>
+              </p>
+            </div>
+          </div>
+          <div className="absolute aspect-[472/359] left-[4.16%] right-[4.42%] top-[14.75px]" data-node-id="I5271:2487;5271:2445" data-name="image">
+            <div aria-hidden className="absolute inset-0 pointer-events-none">
+              <div className="absolute bg-[#f7f7f7] inset-0" />
+              <div className="absolute inset-0 mix-blend-multiply overflow-hidden">
+                <img alt="" className="absolute h-[57.38%] left-[6.36%] max-w-none top-[21.31%] w-[87.29%]" src={imgImage5} />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="h-[452px] relative shrink-0 w-[422px]" data-node-id="5271:2488">
+          <div className="absolute bg-white inset-0" data-node-id="I5271:2488;5271:2432" />
+          <div className="absolute content-stretch flex inset-[73.12%_4.39%_8.37%_4.16%] items-center justify-between" data-node-id="I5271:2488;5271:2433">
+            <div className="[word-break:break-word] grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] not-italic place-items-start relative shrink-0 text-black" data-node-id="I5271:2488;5271:2434">
+              <p className="col-1 font-['GT_America_Trial:Cm_Bl'] leading-[67.508px] ml-0 mt-0 relative row-1 text-[52.716px] tracking-[1.0543px] w-[124.411px]" data-node-id="I5271:2488;5271:2435">
+                KUBU
+              </p>
+              <p className="col-1 font-['Favorit:Regular'] leading-[21.944px] ml-0 mt-[68.53px] relative row-1 text-[16px] tracking-[0.6982px] whitespace-nowrap" data-node-id="I5271:2488;5271:2436">
+                ML2007D-6S
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col gap-[15px] items-end relative shrink-0" data-node-id="I5271:2488;5271:2437">
+              <div className="content-stretch flex gap-[3px] items-center relative shrink-0" data-node-id="I5271:2488;5271:2438">
+                <div className="relative shrink-0 size-[38px]" data-node-id="I5271:2488;5271:2439" data-name="Swatches">
+                  <div className="absolute inset-[-2.63%]">
+                    <img alt="" className="block max-w-none size-full" src={imgSwatches8} />
+                  </div>
+                </div>
+                <div className="relative shrink-0 size-[38px]" data-node-id="I5271:2488;5271:2441" data-name="Swatches">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSwatches1} />
+                </div>
+              </div>
+              <p className="[word-break:break-word] font-['Favorit:Medium'] leading-[0] not-italic relative shrink-0 text-[0px] text-black tracking-[0.8634px] whitespace-nowrap" data-node-id="I5271:2488;5271:2444">
+                <span className="font-['GT_America_Trial:Md'] leading-[27.136px] text-[23.467px]">¥7,800</span>
+                <span className="leading-[27.136px] text-[15.815px]">+tax</span>
+              </p>
+            </div>
+          </div>
+          <div className="absolute aspect-[472/359] left-[4.16%] right-[4.42%] top-[14.75px]" data-node-id="I5271:2488;5271:2445" data-name="image">
+            <div aria-hidden className="absolute inset-0 pointer-events-none">
+              <div className="absolute bg-[#f0f0f0] inset-0" />
+              <div className="absolute inset-0 mix-blend-multiply overflow-hidden">
+                <img alt="" className="absolute h-[57.38%] left-[6.36%] max-w-none top-[21.31%] w-[87.29%]" src={imgImage6} />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="h-[452px] relative shrink-0 w-[422px]" data-node-id="5271:2489">
+          <div className="absolute bg-white inset-0" data-node-id="I5271:2489;5271:2432" />
+          <div className="absolute content-stretch flex inset-[73.12%_4.39%_8.37%_4.16%] items-center justify-between" data-node-id="I5271:2489;5271:2433">
+            <div className="[word-break:break-word] grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] not-italic place-items-start relative shrink-0 text-black" data-node-id="I5271:2489;5271:2434">
+              <p className="col-1 font-['GT_America_Trial:Cm_Bl'] leading-[67.508px] ml-0 mt-0 relative row-1 text-[52.716px] tracking-[1.0543px] w-[124.411px]" data-node-id="I5271:2489;5271:2435">
+                TANA
+              </p>
+              <p className="col-1 font-['Favorit:Regular'] leading-[21.944px] ml-0 mt-[68.53px] relative row-1 text-[16px] tracking-[0.6982px] whitespace-nowrap" data-node-id="I5271:2489;5271:2436">
+                ML2008D-6S
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col gap-[15px] items-end relative shrink-0" data-node-id="I5271:2489;5271:2437">
+              <div className="content-stretch flex gap-[3px] items-center relative shrink-0" data-node-id="I5271:2489;5271:2438">
+                <div className="relative shrink-0 size-[38px]" data-node-id="I5271:2489;5271:2439" data-name="Swatches">
+                  <div className="absolute inset-[-2.63%]">
+                    <img alt="" className="block max-w-none size-full" src={imgSwatches} />
+                  </div>
+                </div>
+                <div className="relative shrink-0 size-[38px]" data-node-id="I5271:2489;5271:2441" data-name="Swatches">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSwatches1} />
+                </div>
+              </div>
+              <p className="[word-break:break-word] font-['Favorit:Medium'] leading-[0] not-italic relative shrink-0 text-[0px] text-black tracking-[0.8634px] whitespace-nowrap" data-node-id="I5271:2489;5271:2444">
+                <span className="font-['GT_America_Trial:Md'] leading-[27.136px] text-[23.467px]">¥7,800</span>
+                <span className="leading-[27.136px] text-[15.815px]">+tax</span>
+              </p>
+            </div>
+          </div>
+          <div className="absolute aspect-[472/359] left-[4.16%] right-[4.42%] top-[14.75px]" data-node-id="I5271:2489;5271:2445" data-name="image">
+            <div aria-hidden className="absolute inset-0 pointer-events-none">
+              <div className="absolute bg-[#f0f0f0] inset-0" />
+              <div className="absolute inset-0 mix-blend-multiply overflow-hidden">
+                <img alt="" className="absolute h-[57.38%] left-[6.36%] max-w-none top-[21.31%] w-[87.29%]" src={imgImage7} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="absolute contents left-[70px] top-[2303px]" data-node-id="5271:2490">
+        <div className="absolute bg-black h-[112px] left-[76.92px] top-[2330px] w-[422px]" data-node-id="5271:2491" />
+        <p className="-translate-x-1/2 [word-break:break-word] absolute font-['GT_America_Trial:Cm_Bd'] leading-[160px] left-[calc(50%-433.5px)] not-italic text-[160px] text-[color:var(--orange,#ff6723)] text-center top-[2303px] whitespace-nowrap" data-node-id="5271:2492">
+          HOW TO
+        </p>
+      </div>
+      <div className="-translate-x-1/2 absolute h-[114px] left-1/2 top-[260px] w-[412px]" data-node-id="5271:2493">
+        <div className="absolute bg-black h-[78px] left-[5px] top-[16px] w-[405px]" data-node-id="5271:2494" />
+        <p
+          className="[word-break:break-word] absolute font-['GT_America_Trial:Cm_Bd'] h-[110px] leading-[110px] left-[calc(50%-206px)] not-italic text-[110px] text-[color:var(--orange,#ff6723)] top-[-2px] w-[412px]"
+          data-node-id="5271:2495"
+          data-annotations="Text display animation
+
+reference:
+
+[https://www.haier.com/jp/markets/snl/](https://www.haier.com/jp/markets/snl/)"
+        >
+          PRODUCTS
+        </p>
+      </div>
+      <div className="-translate-x-1/2 absolute h-0 left-1/2 top-[2525px] w-[1440px]" data-node-id="5271:2496">
+        <div className="absolute inset-[-1px_0]">
+          <img alt="" className="block max-w-none size-full" src={imgVector287} />
+        </div>
+      </div>
+      <div className="absolute content-stretch flex flex-col items-start left-0 overflow-clip top-[2526px] w-[4058px]" data-node-id="5271:2497">
+        <div className="content-stretch flex items-start leading-[0] relative shrink-0 w-[4051px]" data-node-id="5271:2498">
+          <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="5271:2499">
+            <div className="col-1 h-[611px] ml-0 mt-0 relative row-1 w-[405px]" data-node-id="5271:2500">
+              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgRectangle13217} />
+            </div>
+            <div className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-[335px] mt-[542px] place-items-start relative row-1" data-node-id="5271:2501">
+              <div
+                className="bg-[var(--orange,#ff6723)] col-1 ml-0 mt-0 relative row-1 size-[70px]"
+                data-node-id="5271:2502"
+                data-annotations="Click to slide right and expand the modal.
+
+reference:
+
+[https://www.jins.com/jp/sunglasses/collection/](https://www.jins.com/jp/sunglasses/collection/)"
+              />
+              <div className="col-1 ml-[11px] mt-[12px] relative row-1 size-[47px]" data-node-id="5271:2503" data-name="ic:baseline-plus">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcBaselinePlus} />
+              </div>
+            </div>
+          </div>
+          <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="5271:2505">
+            <div className="col-1 h-[611px] ml-0 mt-0 relative row-1 w-[406px]" data-node-id="5271:2506">
+              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgRectangle13219} />
+            </div>
+            <div className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-[336px] mt-[543px] place-items-start relative row-1" data-node-id="5271:2507">
+              <div className="bg-[var(--orange,#ff6723)] col-1 ml-0 mt-0 relative row-1 size-[70px]" data-node-id="5271:2508" />
+              <div className="col-1 ml-[11px] mt-[12px] relative row-1 size-[47px]" data-node-id="5271:2509" data-name="ic:baseline-plus">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcBaselinePlus} />
+              </div>
+            </div>
+          </div>
+          <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="5271:2511">
+            <div className="col-1 h-[611px] ml-0 mt-0 relative row-1 w-[406px]" data-node-id="5271:2512">
+              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgRectangle13220} />
+            </div>
+            <div className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-[336px] mt-[543px] place-items-start relative row-1" data-node-id="5271:2513">
+              <div className="bg-[var(--orange,#ff6723)] col-1 ml-0 mt-0 relative row-1 size-[70px]" data-node-id="5271:2514" />
+              <div className="col-1 ml-[11px] mt-[12px] relative row-1 size-[47px]" data-node-id="5271:2515" data-name="ic:baseline-plus">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcBaselinePlus} />
+              </div>
+            </div>
+          </div>
+          <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="5271:2517">
+            <div className="col-1 h-[611px] ml-0 mt-0 relative row-1 w-[405px]" data-node-id="5271:2518">
+              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgRectangle13218} />
+            </div>
+            <div className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-[335px] mt-[542px] place-items-start relative row-1" data-node-id="5271:2519">
+              <div className="bg-[var(--orange,#ff6723)] col-1 ml-0 mt-0 relative row-1 size-[70px]" data-node-id="5271:2520" />
+              <div className="col-1 ml-[11px] mt-[12px] relative row-1 size-[47px]" data-node-id="5271:2521" data-name="ic:baseline-plus">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcBaselinePlus} />
+              </div>
+            </div>
+          </div>
+          <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="5271:2523">
+            <div className="col-1 h-[611px] ml-0 mt-0 relative row-1 w-[406px]" data-node-id="5271:2524">
+              <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <img alt="" className="absolute h-full left-[-12.77%] max-w-none top-0 w-[112.87%]" src={imgRectangle13221} />
+              </div>
+            </div>
+            <div className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-[336px] mt-[543px] place-items-start relative row-1" data-node-id="5271:2525">
+              <div className="bg-[var(--orange,#ff6723)] col-1 ml-0 mt-0 relative row-1 size-[70px]" data-node-id="5271:2526" />
+              <div className="col-1 ml-[11px] mt-[12px] relative row-1 size-[47px]" data-node-id="5271:2527" data-name="ic:baseline-plus">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcBaselinePlus} />
+              </div>
+            </div>
+          </div>
+          <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="5271:2529">
+            <div className="col-1 h-[611px] ml-0 mt-0 relative row-1 w-[406px]" data-node-id="5271:2530">
+              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgRectangle13224} />
+            </div>
+            <div className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-[336px] mt-[543px] place-items-start relative row-1" data-node-id="5271:2531">
+              <div className="bg-[var(--orange,#ff6723)] col-1 ml-0 mt-0 relative row-1 size-[70px]" data-node-id="5271:2532" />
+              <div className="col-1 ml-[11px] mt-[12px] relative row-1 size-[47px]" data-node-id="5271:2533" data-name="ic:baseline-plus">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcBaselinePlus} />
+              </div>
+            </div>
+          </div>
+          <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="5271:2535">
+            <div className="col-1 h-[611px] ml-0 mt-0 relative row-1 w-[406px]" data-node-id="5271:2536">
+              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgRectangle13225} />
+            </div>
+            <div className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-[336px] mt-[543px] place-items-start relative row-1" data-node-id="5271:2537">
+              <div className="bg-[var(--orange,#ff6723)] col-1 ml-0 mt-0 relative row-1 size-[70px]" data-node-id="5271:2538" />
+              <div className="col-1 ml-[11px] mt-[12px] relative row-1 size-[47px]" data-node-id="5271:2539" data-name="ic:baseline-plus">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcBaselinePlus} />
+              </div>
+            </div>
+          </div>
+          <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="5271:2541">
+            <div className="col-1 h-[611px] ml-0 mt-0 relative row-1 w-[406px]" data-node-id="5271:2542">
+              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgRectangle13226} />
+            </div>
+            <div className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-[336px] mt-[543px] place-items-start relative row-1" data-node-id="5271:2543">
+              <div className="bg-[var(--orange,#ff6723)] col-1 ml-0 mt-0 relative row-1 size-[70px]" data-node-id="5271:2544" />
+              <div className="col-1 ml-[11px] mt-[12px] relative row-1 size-[47px]" data-node-id="5271:2545" data-name="ic:baseline-plus">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcBaselinePlus} />
+              </div>
+            </div>
+          </div>
+          <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="5271:2547">
+            <div className="col-1 h-[611px] ml-0 mt-0 relative row-1 w-[406px]" data-node-id="5271:2548">
+              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgRectangle13227} />
+            </div>
+            <div className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-[336px] mt-[543px] place-items-start relative row-1" data-node-id="5271:2549">
+              <div className="bg-[var(--orange,#ff6723)] col-1 ml-0 mt-0 relative row-1 size-[70px]" data-node-id="5271:2550" />
+              <div className="col-1 ml-[11px] mt-[12px] relative row-1 size-[47px]" data-node-id="5271:2551" data-name="ic:baseline-plus">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcBaselinePlus} />
+              </div>
+            </div>
+          </div>
+          <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="5271:2553">
+            <div className="col-1 h-[611px] ml-0 mt-0 relative row-1 w-[406px]" data-node-id="5271:2554">
+              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgRectangle13228} />
+            </div>
+            <div className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-[336px] mt-[543px] place-items-start relative row-1" data-node-id="5271:2555">
+              <div className="bg-[var(--orange,#ff6723)] col-1 ml-0 mt-0 relative row-1 size-[70px]" data-node-id="5271:2556" />
+              <div className="col-1 ml-[11px] mt-[12px] relative row-1 size-[47px]" data-node-id="5271:2557" data-name="ic:baseline-plus">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcBaselinePlus} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="absolute contents left-[70px] top-[2443px]" data-node-id="5271:2559">
+        <div className="absolute bg-black h-[112px] left-[71.92px] top-[2470px] w-[665px]" data-node-id="5271:2560" />
+        <p
+          className="-translate-x-1/2 [word-break:break-word] absolute font-['GT_America_Trial:Cm_Bd'] leading-[160px] left-[calc(50%-313px)] not-italic text-[160px] text-[color:var(--orange,#ff6723)] text-center top-[2443px] whitespace-nowrap"
+          data-node-id="5271:2561"
+          data-annotations="Text display animation
+
+reference:
+
+[https://www.haier.com/jp/markets/snl/](https://www.haier.com/jp/markets/snl/)"
+        >
+          STYLE THEM
+        </p>
+      </div>
+      <Frame1321316256 className="absolute content-stretch flex flex-col items-start left-[70px] overflow-clip py-[25px] top-0 w-[1300px]" />
+    </div>
+  );
+}
