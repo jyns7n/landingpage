@@ -39,7 +39,7 @@ export function ImageCarousel({ images, label, resetKey }: ImageCarouselProps) {
             alt={`${label} ${i + 1}`}
             fill
             sizes="(min-width: 1024px) 421px, 252px"
-            className="object-contain mix-blend-multiply"
+            className="object-cover mix-blend-multiply"
           />
         </div>
       ))}
