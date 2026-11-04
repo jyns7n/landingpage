@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, test } from "vitest";
 import fixture from "../fixtures/products.json";
@@ -40,14 +40,5 @@ describe("StyleThem", () => {
     expect(screen.getAllByRole("button")).toHaveLength(
       STYLE_ITEMS.filter((i) => i.productCode === "ML2001D-6S").length,
     );
-  });
-
-  test("mouse drag scrolls the strip horizontally", () => {
-    setup();
-    const strip = screen.getByRole("region", { name: "Style looks" });
-    fireEvent.mouseDown(strip, { clientX: 300, button: 0 });
-    fireEvent.mouseMove(window, { clientX: 100 });
-    fireEvent.mouseUp(window);
-    expect(strip.scrollLeft).toBe(200);
   });
 });

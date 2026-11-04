@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { useRef } from "react";
-import { useDragScroll } from "@/hooks/useDragScroll";
+import { FreeMode } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 import { STYLE_ITEMS } from "@/lib/style-items";
 import type { Product } from "@/lib/types";
 import { useProductModal } from "./ModalProvider";
@@ -10,8 +11,6 @@ import { SectionTitle } from "./SectionTitle";
 
 export function StyleThem({ products }: { products: Product[] }) {
   const { open } = useProductModal();
-  const strip = useRef<HTMLDivElement>(null);
-  useDragScroll(strip);
 
   const byCode = new Map(products.map((p) => [p.product.code, p]));
 
@@ -21,17 +20,19 @@ export function StyleThem({ products }: { products: Product[] }) {
         <SectionTitle as="h2" size="section" lines={["HOW TO", "STYLE THEM"]} />
       </div>
 
-      <div
-        ref={strip}
+      <Swiper
         role="region"
         aria-label="Style looks"
-        tabIndex={0}
-        className="flex cursor-grab overflow-x-auto border-t border-black [scrollbar-width:none] active:cursor-grabbing [&::-webkit-scrollbar]:hidden"
+        modules={[FreeMode]}
+        slidesPerView="auto"
+        freeMode
+        grabCursor
+        className="border-t border-black"
       >
         {STYLE_ITEMS.map((item) => {
           const product = byCode.get(item.productCode);
           return (
-            <div key={item.id} className="relative h-[492px] w-[326px] shrink-0 select-none lg:h-[611px] lg:w-[405px]">
+            <SwiperSlide key={item.id} className="relative h-[492px]! w-[326px]! select-none lg:h-[611px]! lg:w-[405px]!">
               <Image
                 src={item.image}
                 alt={item.alt}
@@ -50,10 +51,10 @@ export function StyleThem({ products }: { products: Product[] }) {
                   <Image src="/brand/plus.svg" alt="" width={47} height={47} unoptimized />
                 </button>
               )}
-            </div>
+            </SwiperSlide>
           );
         })}
-      </div>
+      </Swiper>
     </section>
   );
 }
