@@ -26,7 +26,7 @@ export function ImageCarousel({ images, label, resetKey }: ImageCarouselProps) {
       className="w-full"
     >
       {images.map((img, i) => (
-        <SwiperSlide key={img.id} className="relative h-[179px]! w-[252px]! lg:h-[298px]! lg:w-[420.868px]!">
+        <SwiperSlide key={img.id} className="relative bg-panel h-[179px]! w-[252px]! lg:h-[298px]! lg:w-[420.868px]!">
           <Image
             src={imageUrl(img.path)}
             alt={`${label} ${i + 1}`}
