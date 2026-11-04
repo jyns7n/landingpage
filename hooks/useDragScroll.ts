@@ -1,6 +1,5 @@
 import { useEffect, type RefObject } from "react";
 
-/** Lets a mouse user drag a horizontally scrollable element (touch / trackpad already scroll natively). */
 export function useDragScroll(ref: RefObject<HTMLElement | null>): void {
   useEffect(() => {
     const el = ref.current;
@@ -16,7 +15,7 @@ export function useDragScroll(ref: RefObject<HTMLElement | null>): void {
       moved = false;
       startX = e.clientX;
       startLeft = el.scrollLeft;
-      el.style.scrollSnapType = "none"; // snap would fight scrollLeft writes while dragging
+      el.style.scrollSnapType = "none";
     };
     const onMove = (e: MouseEvent) => {
       if (!dragging) return;
@@ -28,7 +27,6 @@ export function useDragScroll(ref: RefObject<HTMLElement | null>): void {
       if (dragging) el.style.scrollSnapType = "";
       dragging = false;
     };
-    // A drag must not count as a click on a "+" button underneath the pointer.
     const onClickCapture = (e: MouseEvent) => {
       if (!moved) return;
       e.preventDefault();

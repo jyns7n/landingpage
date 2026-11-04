@@ -21,7 +21,7 @@ describe("Swatch", () => {
     render(<Swatch colors={adisa.skus[1].colors} selected={false} label="Brown Demi" onSelect={() => {}} />);
     const bg = decodeURIComponent(dot("Brown Demi").style.backgroundImage);
     expect(bg).toContain("https://storage.owndays.com/storage/colors/");
-    expect(bg).toContain("/_next/image"); // optimized, not the raw 1.8MB source
+    expect(bg).toContain("/_next/image");
   });
 
   test("two-color sku renders a two-tone gradient", () => {

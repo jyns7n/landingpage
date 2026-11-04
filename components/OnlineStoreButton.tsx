@@ -6,7 +6,6 @@ interface OnlineStoreButtonProps {
 const BASE =
   "flex h-[54px] w-full max-w-[373px] items-center justify-center rounded-[60px] font-favorit text-[16px] font-bold leading-[19.872px] tracking-[0.6323px] text-white transition-colors duration-200";
 
-/** Primary CTA: orange → dark orange on hover; grey + non-interactive when out of stock. */
 export function OnlineStoreButton({ href, disabled }: OnlineStoreButtonProps) {
   if (disabled) {
     return (

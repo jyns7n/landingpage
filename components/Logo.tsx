@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-/** OWNDAYS x MELLER collab logo. Desktop 351x52; mobile crops the same artwork to 240x16. */
 export function Logo() {
   return (
     <a href="#top" aria-label="OWNDAYS x MELLER" className="block shrink-0">

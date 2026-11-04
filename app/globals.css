@@ -29,7 +29,6 @@ body {
   }
 }
 
-/* Product modal enter / leave */
 @keyframes modal-fade-in {
   from { opacity: 0; }
 }

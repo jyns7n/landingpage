@@ -2,7 +2,6 @@ import { useEffect, type RefObject } from "react";
 
 const FOCUSABLE = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
-/** Keeps Tab / Shift+Tab cycling inside `ref` while mounted. */
 export function useFocusTrap(ref: RefObject<HTMLElement | null>): void {
   useEffect(() => {
     const root = ref.current;

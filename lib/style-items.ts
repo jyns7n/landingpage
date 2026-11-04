@@ -1,7 +1,6 @@
 export interface StyleItem {
   id: string;
   image: string;
-  /** Product opened by the "+" button. Figma has no explicit mapping, so looks cycle through the 8 products. */
   productCode: string;
   alt: string;
 }

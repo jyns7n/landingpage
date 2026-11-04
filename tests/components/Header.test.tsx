@@ -76,7 +76,6 @@ describe("Header resize", () => {
     act(() => onChange?.({ matches: true }));
     expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
     expect(document.body.style.overflow).toBe("");
-    // @ts-expect-error cleanup the stub
-    delete window.matchMedia;
+    delete (window as { matchMedia?: unknown }).matchMedia;
   });
 });

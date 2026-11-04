@@ -15,7 +15,6 @@ export function Footer() {
   return (
     <footer className="bg-black font-favorit uppercase text-orange">
       <div className="flex flex-col lg:grid lg:grid-cols-[64.67%_1fr] lg:grid-rows-[320px_80px]">
-        {/* Primary nav */}
         <nav
           aria-label="Footer"
           className="order-1 flex flex-col border-b-2 border-orange lg:col-start-1 lg:row-start-1 lg:mt-[69px] lg:gap-[20px] lg:self-start lg:border-b-0 lg:pl-[70px]"
@@ -33,7 +32,6 @@ export function Footer() {
           ))}
         </nav>
 
-        {/* Store panel */}
         <div className="order-2 flex flex-col items-center border-b-2 border-orange px-[30px] py-[40px] lg:col-start-2 lg:row-start-1 lg:justify-center lg:border-b-0 lg:border-l lg:px-0 lg:py-0">
           <div className="flex w-full items-center justify-between lg:w-auto lg:flex-col lg:gap-[18px]">
             <a
@@ -57,7 +55,6 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Instagram */}
         <a
           href="https://www.instagram.com/"
           target="_blank"
@@ -68,7 +65,6 @@ export function Footer() {
           <Image src="/brand/instagram.svg" alt="" width={24} height={24} unoptimized />
         </a>
 
-        {/* Legal links */}
         <ul className="order-3 flex flex-col gap-[4px] px-[30px] py-[30px] text-[12px] font-bold leading-[20px] tracking-[0.7px] lg:col-start-1 lg:row-start-2 lg:flex-row lg:items-center lg:gap-[40px] lg:border-t lg:border-orange lg:px-0 lg:py-0 lg:pl-[70px] lg:text-[13px]">
           {SECONDARY_LINKS.map((item) => (
             <li key={item.label}>

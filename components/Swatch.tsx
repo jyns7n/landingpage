@@ -27,7 +27,6 @@ function dotStyle(colors: SkuColor[]): { style: CSSProperties; light: boolean } 
   };
 }
 
-/** Circular color swatch (38px desktop / 32px mobile) acting as a radio option. */
 export function Swatch({ colors, selected, label, onSelect }: SwatchProps) {
   const { style, light } = dotStyle(colors);
   return (

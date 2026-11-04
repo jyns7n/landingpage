@@ -48,6 +48,23 @@ for (const vp of VIEWPORTS) {
       await expect(dialog).toBeHidden();
     });
 
+    test("modal carousel swipes by dragging with a single gesture", async ({ page }) => {
+      await page.goto("/");
+      await page.getByRole("region", { name: "Products" }).getByRole("button", { name: "View ADISA" }).click();
+      const carousel = page.getByRole("dialog", { name: "ADISA" }).getByRole("region", { name: "ADISA images" });
+      const slides = carousel.locator(".swiper-slide");
+      await expect(slides.first()).toHaveClass(/swiper-slide-active/);
+      const box = (await carousel.boundingBox())!;
+      const y = box.y + box.height / 2;
+      await page.mouse.move(box.x + box.width * 0.7, y);
+      await page.mouse.down();
+      await page.mouse.move(box.x + box.width * 0.2, y, { steps: 12 });
+      await page.mouse.up();
+      await expect(slides.nth(1)).toHaveClass(/swiper-slide-active/);
+      await page.keyboard.press("Escape");
+      await expect(page.getByRole("dialog", { name: "ADISA" })).toBeHidden();
+    });
+
     test("out-of-stock product shows disabled OUT OF STOCK", async ({ page }) => {
       await page.goto("/");
       await page.getByRole("region", { name: "Products" }).getByRole("button", { name: "View CHAUEN" }).click();

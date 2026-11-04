@@ -3,7 +3,6 @@ import type { ElementType } from "react";
 interface SectionTitleProps {
   lines: string[];
   as?: ElementType;
-  /** `hero` = 110px display title, `section` = 160px (72px on mobile). */
   size?: "hero" | "section";
   className?: string;
 }
@@ -13,7 +12,6 @@ const SIZE = {
   section: "text-[72px] leading-[63px] lg:text-[160px] lg:leading-[140px]",
 } as const;
 
-/** Orange display type sitting on an offset black highlight bar (Figma "PRODUCTS" / "HOW TO STYLE THEM"). */
 export function SectionTitle({ lines, as: Tag = "h2", size = "section", className = "" }: SectionTitleProps) {
   return (
     <Tag

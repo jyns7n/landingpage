@@ -13,7 +13,6 @@ import { SkuChips } from "./SkuChips";
 
 const LEAVE_MS = 220;
 
-/** Mount point: renders nothing until a product is opened. */
 export function ProductModal() {
   const { state } = useProductModal();
   if (!state) return null;
@@ -34,7 +33,6 @@ function ModalDialog({ state }: { state: ModalState }) {
   useBodyScrollLock(true);
   useFocusTrap(panelRef);
 
-  // Move focus in on open; hand it back to the trigger on close.
   useEffect(() => {
     const previous = document.activeElement as HTMLElement | null;
     closeRef.current?.focus();

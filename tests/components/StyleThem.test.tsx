@@ -7,7 +7,7 @@ import { ModalProvider, useProductModal } from "@/components/ModalProvider";
 import { StyleThem } from "@/components/StyleThem";
 import { STYLE_ITEMS } from "@/lib/style-items";
 
-const products = fixture.data as unknown as Product[]; // ADISA, CHAUEN, KESSIE
+const products = fixture.data as unknown as Product[];
 
 function Probe() {
   const { state } = useProductModal();
@@ -36,7 +36,7 @@ describe("StyleThem", () => {
   });
 
   test("looks whose product is not loaded render no + button", () => {
-    setup([products[0]]); // only ADISA (looks 1 and 9)
+    setup([products[0]]);
     expect(screen.getAllByRole("button")).toHaveLength(
       STYLE_ITEMS.filter((i) => i.productCode === "ML2001D-6S").length,
     );
